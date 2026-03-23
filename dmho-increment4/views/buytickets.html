@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Ho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>MonoMuse</title>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/images/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+        </nav>
+
+        <main class="main">
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Ticket Description</th>
+                    <th>Price ($)</th>
+                </tr>
+                <tr>
+                    <td>Adult</td>
+                    <td>Full-price ticket for visitors aged 18 and above. Under 18 is free of charge. </td>
+                    <td>18.00</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Discounted ticket for students with valid ID.</td>
+                    <td>10.00</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Discounted ticket for museum members. ID required.</td>
+                    <td>15.00 </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td>April 5</td>
+                    <td>10:00 AM</td>
+                    <td><button onclick="showForm('April 5')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>April 12</td>
+                    <td>10:00 AM</td>
+                    <td><button onclick="showForm('April 12')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>April 19</td>
+                    <td>10:00 AM</td>
+                    <td><button onclick="showForm('April 19')">Add to Cart</button></td>
+                </tr>
+            </table>
+
+
+
+
+            <div id="purchaseForm">
+                <h2>Purchase Tickets</h2>
+                <form>
+                    <label for="name">Name (required):</label> <br>
+                    <input type="text" id="name" name="name" required> <br><br>
+
+                    <label for="email">Email (required):</label> <br>
+                    <input type="email" id="email" name="email" required> <br><br>
+
+                    <label for="quantity">Quantity of Tickets:</label> <br>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1"> <br><br>
+
+                    <label for="selectedDate">Selected Date:</label> <br>
+                    <input type="text" id="selectedDate" name="selectedDate" readonly> <br><br>
+
+                    <button id="submitBtn" type="button" onclick="submitTickets()">Submit</button>
+                </form>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p>&copy;<span id="copyYear"></span>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
