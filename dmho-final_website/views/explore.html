@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Ho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>MonoMuse</title>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/images/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets/Give</a>
+        <button class="hamburger" onclick = "toggleMenu()">&#9776</button>
+    </nav>
+
+    <main class="main">
+        <h2>Explore</h2>
+        <div class="slideshow">
+            <img class="slide" src="../static/images/MonoMuse.png" alt="MonoMuse Museum" style = "width: 420px; height: 300px;"> 
+            <img class="slide" src="../static/images/MonoMuseLI.png" alt="MonoMuse's Larva Island Exhibit" style = "width: 420px; height: 300px;">
+            <img class="slide" src="../static/images/MonoMuseCR.png" alt="MonoMuse's Clash Royale Exhibit" style = "width: 420px; height: 300px;">
+            <button onclick="changeSlide(-1)">Back</button>
+            <button onclick="changeSlide(1)">Next</button>
+        </div>
+        
+        <h3>Discover MonoMuse</h3>
+        <p>Founded in 2000, MonoMuse has been a beacon of innovation and creativity for just over a quarter of a century. Since then, countless visitors have been inspired by our numerous exhibitions and interactive installations.</p>
+        <h3>Mission Statement</h3>
+        <p>Our mission is to inspire curiosity and creativity through the intersection of art, technology, and human experience.</p>
+        <h3>Milestones</h3>
+        
+        <ul>
+            <li>2000: MonoMuse opens its doors to the public.</li>
+            <li>2005: Launch of the first interactive digital art installation.</li>
+            <li>2010: Introduction of virtual reality experiences.</li>
+            <li>2015: Expansion to include a dedicated space for emerging artists.</li>
+            <li>2020: Launch of the MonoMuse mobile app for enhanced visitor engagement.</li>
+        </ul>
+
+        <h3>Visit Us</h3>
+        <p>We would love to have you visit us! MonoMuse is located at 5000 Forbes Avenue, Pittsburgh, PA 15213. Use the map below to plan your visit! Tickets are selling fast, but you can click the link below to reserve a remaining spot.</p>
+        
+        <div id="map"></div>
+        <a id="ticketlink" class="ticket-link" href="../views/buytickets.html">Buy Tickets</a>
+
+        
+
+    </main>
+    <footer class="footer">
+        <p>&copy;<span id="copyYear"></span>MonoMuse. All rights reserved.</p>
+    </footer>
+    </div>
+</body>
+</html>

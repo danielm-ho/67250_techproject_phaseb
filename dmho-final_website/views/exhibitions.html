@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Ho">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>MonoMuse</title>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/images/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets/Give</a>
+        <button class="hamburger" onclick = "toggleMenu()">&#9776</button>
+
+    </nav>
+    <main class="main">
+        <h1>Exhibitions</h1>
+        <div class="exhibitions-container">
+            <div class="exhibition-card">
+                <h2>Exhibition 1: Larva Island: A Deep Dive</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/1oHd7_NGVuc?si=IeNMhEs-Jd6Clp5P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>This exhibition examines the deep nuances and powerful implications of the hit TV show, "Larva Island." Users can explore the intersection of technology, creativity, and innovation that makes up the show.</p>
+            </div>
+
+            <div class="exhibition-card">
+                <h2>Exhibition 2: Clash Royale: A History</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/1-2hO6c1FdY?si=z4VAdspRRAAEOq2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>HEHEHEHA! This exhibition explores the history and evolution of the popular mobile game, "Clash Royale." Visitors can learn about the game's development, gameplay mechanics, and its impact on the gaming industry.</p>
+            </div>
+        </div>
+
+        <a id="ticketlink" class="ticket-link" href="../views/buytickets.html">Buy Tickets</a>
+
+    </main>
+    <footer class="footer">
+        <p>&copy;<span id="copyYear"></span>MonoMuse. All rights reserved.</p>
+    </footer>
+    </div>
+</body>
+</html>
